@@ -1,3 +1,3 @@
-module github.com/multiverse-os/cli/terminal/text/unicode/symbols
+module github.com/multiverse-os/symbols
 
 go 1.19
