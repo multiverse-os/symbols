@@ -39,9 +39,6 @@ func main() {
 	diceOne := randomNumber(6)
 	diceTwo := randomNumber(6)
 
-	fmt.Printf("Dice 1: %v\n", diceOne)
-	fmt.Printf("Dice 2: %v\n", diceTwo)
-
 	fmt.Printf("=> %s + %s = %v\n", drawDice(diceOne), drawDice(diceTwo), (diceOne + diceTwo))
 
 }
