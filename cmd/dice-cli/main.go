@@ -8,14 +8,13 @@ import (
 	dice "github.com/multiverse-os/symbols/games/dice"
 )
 
-func randomDiceNumber() int {
-	randomNumber := rand.Intn(6)
-	fmt.Printf("randomNumber: %v", randomNumber)
+func randomNumber(maxNumber int) int {
+	randomNumber := rand.Intn(maxNumber) + 1
 	return randomNumber
 }
 
-func rollDice() string {
-	switch randomDiceNumber() {
+func drawDice(number int) string {
+	switch number {
 	case 1:
 		return dice.Symbols["one"]
 	case 2:
@@ -37,6 +36,12 @@ func main() {
 	fmt.Printf("dice-cli\n")
 	fmt.Printf("========\n")
 
-	fmt.Printf("=> %s + %s\n", rollDice(), rollDice())
+	diceOne := randomNumber(6)
+	diceTwo := randomNumber(6)
+
+	fmt.Printf("Dice 1: %v\n", diceOne)
+	fmt.Printf("Dice 2: %v\n", diceTwo)
+
+	fmt.Printf("=> %s + %s = %v\n", drawDice(diceOne), drawDice(diceTwo), (diceOne + diceTwo))
 
 }
