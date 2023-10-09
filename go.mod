@@ -1,5 +1,3 @@
-module github.com/multiverse-os/cli/terminal/text/symbols
+module github.com/multiverse-os/symbols
 
 go 1.19
-
-require github.com/multiverse-os/symbols v0.1.0
